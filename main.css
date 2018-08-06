@@ -1,0 +1,250 @@
+/* Define custom variables */
+:root {
+    --header-color: #444;
+    --slogan-background-color: rgba(255, 255, 255, 0.6);
+    --title-font: 'Monsterrat', sans-serif;
+    --text-font: 'Roboto', sans-serif;
+}
+
+/* Embed custom font */
+/* NOTE: May have to do hacker here. See: https://stackoverflow.com/questions/23954877/internet-explorer-11-and-supported-web-fonts */
+@font-face {
+    font-family: "SummitBold-Solid";
+    /* src: url("assets/SummitBold-Solid.ttf"); */
+    src: url("assets/SummitBold-Solid.woff");
+}
+
+/* Style all content in webpage */
+body {
+    margin: 0; /* No space between edge of browser and body of HTML doc*/
+    padding: 0; /* No space between edge of browser and body of HTML doc*/
+    width: 80%; /* Make the webpage only take up 80% of the width of the window */
+    margin: 0 auto 0 auto; /* Center (left-to-right) the webpage in the window */
+}
+
+/* Style the content in the header (title) */
+header {
+    text-transform: uppercase; /* Capitalize all letters */
+    font-family: SummitBold-Solid; /* Use the custom font */
+    font-size: 1.3em; /* Increase the font size */
+    color: #444; /*Hard-coded to support IE */
+    color: var(--header-color); /* Change the font color */
+
+    border-bottom: solid #444 12px; /*Hard-coded color to support IE */
+    border-bottom: solid var(--header-color) 12px; /* Add Title Bar to bottom of Header */
+
+    margin: 1% 0 0 0; /* Add a little space between top of page and header. */
+}
+
+header img {
+    max-width: 20px; /* Keep the header at a fixed max size */
+    margin-bottom: -0.25em; /* Make the logo image closer to the level of the logo title */
+}
+
+.intro {
+    position: relative; /* Prepare for superimposing */
+
+    font-family: 'Monsterrat', sans-serif; /* Hard-coded for IE support */
+    font-family: var(--title-font);
+}
+
+.intro video {
+    max-width: 100%; /* Restrain the video to be within the body */
+}
+
+.intro #motto {
+    position: absolute; /* Superimpose the span over the video */
+    top: 0; /* Put the top of the span near the top of the intro */
+    bottom: 0;
+    left: 0; /* Put the left of the span on the left of the intro */
+    right: 0;
+    text-align: center; /* Center (left-to-right) the span in the intro */
+
+    /* top | right | bottom | left */
+    padding: 10% 5% 5% 5%; /* Add space on all sides of the span */
+    margin: auto auto auto auto; /* Center it (left-to-right). It's necessary to have left: 0 and right: 0 for this to work. Also, leave some space on top and bottom for the video to show through */
+
+    font-size: 1.7em;
+}
+
+/* Add a transparent background to make it easier to read the text */
+.fancy-background {
+    background-color: white; /* Hard-coded color for IE Support */
+    background-color: var(--slogan-background-color);
+    border: 0;
+    margin: 0;
+    /* top | right | bottom | left */
+    padding: 0 1% 1px 1%;
+}
+
+.contact-info {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif; /* Hard-coded font for IE */
+    font-family: var(--text-font);
+
+    margin-top: 2%;
+}
+
+.topic {
+    font-family: 'Roboto', sans-serif; /* Hard-coded font for IE */
+    font-family: var(--text-font);
+    /* margin-bottom: 5%; */
+    margin-top: 5%;
+}
+
+.topic-title {
+    font-size: 1.2rem;
+    font-family: 'Monsterrat', sans-serif; /* Hard-coded for IE support */
+    font-family: var(--title-font);
+
+    margin-right: auto; /* Make right margin as small as possible */
+    border-bottom: solid #444 1px; /*Hard-coded color to support IE */
+    border-bottom: solid var(--header-color) 1px; /* Add accenting bar to each topic title */
+}
+
+.topic img {
+    max-width: 100%; /* Restrain the image to be within the body */
+}
+
+/* Custom Bullet Points */
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li::before {
+    content: '';
+    display: inline-block;
+    height: 1em;
+    width: 1.5em;
+    background-image: url('assets/EQUIPTECH-BC LOGO Cropped.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -1.5em;
+    margin-bottom: -0.25em;
+}
+
+/* Bible Verse in Footer */
+footer {
+    margin-top: 5%;
+    padding-top: 5%;
+
+    border-top: solid #444 6px; /*Hard-coded color to support IE */
+    border-top: solid var(--header-color) 6px;
+}
+#ourmanna-verse {
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5% 2% 0.5% 2%;
+    margin-bottom: 1%; /* Give just a little room between the quote and the bottom of the page */
+    background-color: #444; /* Hard-coded color for IE */
+    background-color: var(--header-color);
+    border-color: rgba(0, 0, 0, 1);
+    border-radius: 15px;
+    color: white;
+}
+#mannaverse {
+    font-size: 14px;
+    font-weight: bold;
+}
+#mannaverse-reference::before {
+    content: "- ";
+}
+#mannaverse-reference::after {
+    content: "  [provided by Our Manna]"
+}
+#mannaverse-reference {
+    text-align: right;
+    font-size: 12px;
+}
+#mannaverse-version {
+    color: #ddd;
+}
+
+/* Only show the 2nd collage if the screen is big enough? */
+
+/* All CSS above this line applies to all screen sizes (especially mobile-sized screens) */
+/* Add desktop / laptop support */
+/* For browser width greater than 800px, add this code */
+@media screen and (min-width: 800px) {
+    header {
+        font-size: 3em; /* Increase the font size */
+        border-bottom: solid #444 20px; /* Hard-coded color for IE */
+        border-bottom: solid var(--header-color) 20px; /* Increase thickness of border */
+    }
+
+    header img {
+        max-width: 60px; /* Keep the header at a fixed max size */
+    }
+
+    .intro #motto {
+        padding-top: 1%;
+
+        font-size: 2em;
+    } 
+
+    .topic-title {
+        font-size: 1.7rem;
+        font-family: 'Monsterrat', sans-serif; /* Hard-coded font for IE support */
+        font-family: var(--title-font);
+    }
+
+    .fancy-background {
+        padding-bottom: 2px;
+    }
+
+    .contact-info {
+        position: absolute; /* Superimpose the info over the video */
+        top: 0; /* Put the top of the info at the top of the intro */
+        left: 0; /* Put the left of the span on the left of the intro */
+        right: 0; /* Put the right of the span on the right of the intro */
+        text-align: center; /* Center (left-to-right) the info in the intro */
+
+        /* top | right | bottom | left */
+        padding: 15% 20% 15% 20%; /* Add space on all sides of the span */
+        margin: auto 0 auto 0; /* Center it. It's necessary to have left: 0 and right: 0 for this to work */
+
+        font-size: 1.25em;
+    }
+
+    .topic {
+        font-size: 1.25em;
+    }
+}
+
+/* For large screens */
+@media screen and (min-width: 1500px) {
+    header {
+        font-size: 5em;
+        border-bottom: solid #444 40px; /* Hard-coded for IE support */
+        border-bottom: solid var(--header-color) 40px;
+    }
+
+    header img {
+        max-width: 100px; /* Keep the header at a fixed max size */
+    }
+
+    .intro #motto {
+        font-size: 4em;
+    }
+
+    .fancy-background {
+        padding-bottom: 3px;
+    }
+
+    .contact-info {
+        /* top | right | bottom | left */
+        padding: 25% 20% 15% 20%; /* Add space on all sides of the span */
+
+        font-size: 1.7em;
+    }
+
+    .topic-title {
+        font-size: 3.5rem;
+        font-family: 'Monsterrat', sans-serif; /* Hard-coded font for IE support */
+        font-family: var(--title-font);
+    }
+
+    .topic {
+        font-size: 1.8em;
+    }
+}

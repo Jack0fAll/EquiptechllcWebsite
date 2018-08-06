@@ -1,0 +1,21 @@
+Author of all code on this website: Jack Tabb
+Date Edited: Aug 02 2018
+
+Font:
+-Summit font by Luke Lisi
+
+Video:
+-Cloud mp4 from: https://youtu.be/a96UbKNuNQY (Edited in Premiere Pro. Rendered with H.264)
+
+Images:
+-50 state map (edited in Photoshop): Bruce Jones Design -- Royalty Free
+-Collage (assembled in Photoshop):
+--Windmill turbine from: Ethan Weil Unsplash
+--Man Drawing on paper from: Daniel McCullough Unsplash
+--Blueprint turbine engine: Beaudaniels
+--Cutaway Turbine: Beaudaniels
+--Cutaway reciprocating compressor: Beaudaniels
+--Blueprint with pencil and ruler: Pixabay
+--Mars Rover under JPL License from NASA website
+--Tractor from Dietmar Reichle Unsplash
+--Robotic Arm from preview on VectorStock by all_is_magic: https://www.vectorstock.com/royalty-free-vector/assembly-line-automated-conveyor-system-vector-19425699
