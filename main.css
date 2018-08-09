@@ -131,6 +131,8 @@ footer {
 
     border-top: solid #444 6px; /*Hard-coded color to support IE */
     border-top: solid var(--header-color) 6px;
+
+    font-size: 1.15em;
 }
 #ourmanna-verse {
     font-family: 'Roboto', sans-serif;
@@ -143,7 +145,6 @@ footer {
     color: white;
 }
 #mannaverse {
-    font-size: 14px;
     font-weight: bold;
 }
 #mannaverse-reference::before {
@@ -154,7 +155,7 @@ footer {
 }
 #mannaverse-reference {
     text-align: right;
-    font-size: 12px;
+    font-size: 0.9em;
 }
 #mannaverse-version {
     color: #ddd;
@@ -208,6 +209,27 @@ footer {
 
     .topic {
         font-size: 1.25em;
+    }
+
+    .get-flexed {
+        display: flex;
+        /* justify-content: space-between; */
+        /* top | right | bottom | left */
+        margin: 0 auto 0 auto;
+        /* margin: auto; */
+    }
+
+    /* .get-flexed ul {
+        width: 100%;
+    } */
+
+    .get-flexed li {
+        /* margin-right: 1 rem; */
+    }
+
+    .get-flexed img {
+        margin-top: 1em;
+        /* max-width: 100%; */
     }
 }
 
